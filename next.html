@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Admission Form</title>
+	<style>
+		body {
+			background-image:linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)),url('v1.jpg');
+			font-family: Arial, sans-serif;
+			font-size: 10px;
+		}
+
+		h1 {
+			color: #fff;
+			text-align: center;
+		}
+
+		form {
+			background-color: #fff;
+			border-radius: 5px;
+	
+			margin: 20px auto;
+			padding:30px;
+			width: 500px;
+		}
+
+		label {
+			margin-bottom: 10px;
+		}
+
+		input[type="text"],
+		input[type="text"],
+		input[type="text"],
+		textarea,
+		select {
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			box-sizing: border-box;
+			font-size: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+			width: 100%;
+		}
+		input[type="submit"],
+		input[type="reset"] {
+			background-color: #4CAF50;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 10px;
+			padding: 10px 20px;
+		}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Student Admission Form</h1>
+
+	<form action="next.php" method="POST">
+		<label for="finame">First Name:</label>
+		<input type="text" id="finame" name="finame" required>
+
+		<label for="flname">Last Name:</label>
+		<input type="text" id="flname" name="flname" required>
+
+		<label for="faddress">Address:</label>
+		<textarea id="faddress" name="faddress" required></textarea>
+
+		<label for="fgender">Gender:</label>
+		<input type="radio" id="male" name="fgender" value="male" required>
+		<label for="male">Male</label>
+		<input type="radio" id="female" name="fgender" value="female" required>
+		<label for="female">Female</label>
+		<input type="radio" id="other" name="fgender" value="other" required>
+		<label for="other">Other</label><br><br>
+
+		<label for="femail">Email:</label>
+		<input type="text" id="femail" name="femail" required>
+
+		<label for="fphn">Phone Number:</label>
+		<input type="text" id="fphn" name="fphn" required>
+
+		<label for="fdob">Date of Birth:</label>
+		<input type="date" id="fdob" name="fdob" required><br><br>
+
+		<label for="fps">Program of Study:</label>
+		<select id="program" name="fps" required>
+			<option value="">Select Program</option>
+			<option value="Computer Science">Computer Science</option>
+			<option value="Information technology">Information Technology</option>
+			<option value="Electronic communication">Electronic Communication</option>
+		</select><br><br>
+
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</form>
+
+</body>
+</html>
